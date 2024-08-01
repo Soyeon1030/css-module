@@ -1,0 +1,12 @@
+@media screen and (min-width:1280px) {
+	/* Tablet in landscape */
+
+}
+@media screen and (min-width:480px) and (max-width: 1279px) {
+	/* Tablet */
+
+}
+@media screen and (max-width:479px){ 
+	/* Mobile */
+
+}
