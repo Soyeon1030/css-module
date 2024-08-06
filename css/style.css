@@ -158,7 +158,8 @@
   justify-content: space-evenly;
   margin: .75rem .125rem;
 }
-.btn-b1 button{
+.btn-b1 button,
+button.btn-b1 {
   width: 100%;
   padding: 1rem 0;
   background: #3D3D3D;
@@ -224,6 +225,25 @@ input[type=checkbox] {
 .input-c-1 input:checked + label::before  {
   background: #3D3D3D url('img/icon-check.png')no-repeat center;
   border: 1px solid #3d3d3d;
+}
+.input-c-2 {
+  display: flex;
+  justify-content: space-between;
+}
+.input-c-2 label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.input-c-2 label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url('/img/icon-check-off.png')no-repeat center;
+}
+.input-c-2 input:checked + label::before {
+  background: url('/img/icon-check-on.png')no-repeat center;
 }
 
 /* nav */
@@ -408,4 +428,47 @@ input[type=checkbox] {
   top: 50%;
   transform: translate(-50%, -50%);
   color: var(--bs-gray-600);
+}
+
+.appBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.backBtn {
+  width: 24px;
+  height: 24px;
+  background: url('../img/icon-arrow-back.png')no-repeat center;
+}
+
+.contents {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.contents h2 {
+  margin: 1.25rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.contents h3 {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.contents button.p-fixed {
+  width: calc(100% - 24px);
+  bottom: 1.5rem;
+}
+.terms-list li {
+  cursor: pointer;
+  margin: 0.5rem 0;
+}
+.terms-list li p {
+  position: relative;
+  margin-left: 32px;
+}
+.terms-list li button {
+  color: var(--bs-gray-600);
+  text-decoration: underline;
 }
