@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지</title>
+    <!-- css -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- script -->
+    <script type="text/javascript" src="js/common.js"></script>
+  </head>
+  <body>
+    <div class="screen">
+      <div class="wrap">
+        <div class="mypage-top">
+          <h2>{=User Name} 님</h2>
+        </div>
+          <div class="menu-list">
+            <div class="meni-item" onclick="location.href='profile.html'">
+              <div class="menu-icon">
+                <img src="img/icon-profile-1.png" alt="내정보 관리 아이콘">
+              </div>
+              <h3>내정보 관리</h3>
+            </div>
+            <div class="meni-item" onclick="location.href='bookmark.html'">
+              <div class="menu-icon">
+                <img src="img/icon-bookmark-line.png" alt="저장된 목록 아이콘">
+              </div>
+              <h3>저장된 목록</h3>
+            </div>
+            <div class="meni-item" onclick="location.href='inquiry.html'">
+              <div class="menu-icon">
+                <img src="img/icon-inquiry.png" alt="소리함 아이콘">
+              </div>
+              <h3>소리함</h3>
+            </div>
+            <div class="meni-item" onclick="location.href='login.html'">
+              <div class="menu-icon">
+                <img src="img/icon-logout.png" alt="로그아웃 아이콘">
+              </div>
+              <h3>로그아웃</h3>
+            </div>
+          </div>
+
+        <ul class="nav">
+          <li>
+            <a href="alarm.html">
+              <div></div>
+              <p>알림</p>
+            </a>
+          </li>
+          <li>
+            <a href="home.html">
+              <div></div>
+              <p>홈</p>
+            </a>
+          </li>
+          <li class="on">
+            <a href="mypage.html">
+              <div></div>
+              <p>마이페이지</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이메일 찾기</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="wrap">
+        <div class="container login">
+          <div class="appBar">
+            <button class="backBtn" onclick="history.go(-1)"></button>
+            <h1>이메일 찾기</h1>
+            <div class="blank"></div>
+          </div>
+          <div class="contents mt-2">
+            <form>
+              <div class="input-t-1">
+                <h3>이름</h3>
+                <input type="text" placeholder="이름을 입력해주세요." />
+                <span class="warning"></span>
+                <!-- 클래스 on 부여시 display:block; -->
+              </div>
+              <div class="input-t-1">
+                <h3>연락처</h3>
+                <div>
+                  <input type="number" placeholder="-없이 휴대폰 번호를 입력해주세요." />
+                  <button>인증번호 받기</button>
+                </div>
+                <!-- 클래스 on 부여시 display:block; -->
+                <span class="time">03:00</span>
+                <span class="warning"></span>
+              </div>
+              <div class="input-t-1">
+                <h3>인증번호</h3>
+                <div>
+                  <input type="text" placeholder="인증번호를 입력해주세요." />
+                  <button>확인</button>
+                </div>
+                <!-- 클래스 on 부여시 display:block; or 클래스 success/warning 부여해서 표기하기 -->
+                <span class="success">인증되었습니다.</span>
+                <span class="warning">인증번호가 일치하지 않습니다.</span>
+              </div>
+            </form>
+            <button class="btn-b1 p-fixed" onclick="location.href='findid-com.html'">이메일 찾기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

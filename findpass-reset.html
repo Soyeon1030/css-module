@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비밀번호 재설정</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="wrap">
+        <div class="container login">
+          <div class="appBar">
+            <button class="backBtn" onclick="history.go(-1)"></button>
+            <h1>비밀번호 재설정</h1>
+            <div class="blank"></div>
+          </div>
+          <div class="contents mt-2">
+            <form>
+              <div class="input-t-1">
+                <h3>새 비밀번호</h3>
+                <input type="password" placeholder="비밀번호를 입력해주세요." />
+                <span class="warning"></span>
+                <!-- 클래스 on 부여시 display:block; -->
+              </div>
+              <div class="input-t-1">
+                <h3>새 비빌번호 확인</h3>
+                <input type="password" placeholder="비밀번호를 다시 입력해주세요." />
+                <!-- 클래스 on 부여시 display:block; -->
+                <span class="warning">비밀번호가 일치하지 않습니다.</span>
+              </div>
+            </form>
+            <button class="btn-b1 p-fixed" onclick="location.href='login.html'">비밀번호 변경</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,71 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>로그인</title>
-        <link rel="stylesheet" href="css/reset.css" />
-        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-        <link rel="stylesheet" href="css/styleguide.css" />
-        <link rel="stylesheet" href="css/media.css" />
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
-    <body>
-        <div class="screen">
-            <div class="wrap">
-                <div class="container container-b login">
-                    <div class="logo">
-                        <img src="img/logo.png" alt="로고">
-                    </div>
-                    <div class="form">
-                        <div class="input-t-1">
-                            <h3>이메일 주소</h3>
-                            <input type="text" placeholder="이메일을 입력해주세요.">
-                        </div>
-                        <div class="input-t-1">
-                            <h3>비밀번호</h3>
-                            <input type="text" placeholder="비밀번호를 입력해주세요.">
-                        </div>
-                        <div class="input-c-1"> 
-                            <input type="checkbox" id="idsave">
-                            <label for="idsave"><span>아이디 저장</span></label>
-                        </div>
-                    </div>
-                    <div class="btn btn-b1"><a href="home.html"><button>로그인</button></a></div>
-                    <div class="btn-g btn-s1 mt-2">
-                        <button><a href="join-01.html">회원가입</a></button>
-                        <button>이메일 찾기</button>
-                        <button>비밀번호 찾기</button>
-                    </div>
-                    <div class="text-center mt-2">간편로그인</div>
-                    <div class="btn-g">
-                        <button><img src="img/icon-google.png" alt="구글 아이콘"></button>
-                        <button><img src="img/icon-naver.png" alt="네이버 아이콘"></button>
-                        <button><img src="img/icon-kakao.png" alt="카카오 아이콘"></button>
-                        <button><img src="img/icon-apple.png" alt="애플 아이콘"></button>
-                    </div>
-                </div>
-                <ul class="nav">
-                    <li>
-                        <a href="">
-                            <img src="img/icon-bell.png" alt="알림 네비게이션">
-                            <p>알림</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="home.html">
-                            <img src="img/icon-home.png" alt="홈 네비게이션">
-                            <p>홈</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="img/icon-profile.png" alt="마이페이지 네비게이션">
-                            <p>마이페이지</p>
-                        </a>
-                    </li>
-                </ul>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="wrap">
+        <div class="container login">
+          <div class="logo">
+            <img src="img/logo.png" alt="로고" />
+          </div>
+          <form>
+            <div class="input-t-1">
+              <h3>이메일 주소</h3>
+              <input type="email" placeholder="이메일을 입력해주세요." />
             </div>
+            <div class="input-t-1">
+              <h3>비밀번호</h3>
+              <input type="password" placeholder="비밀번호를 입력해주세요." />
+              <span class="warning"
+                >이메일 혹은 비밀번호가 일치하지 않습니다.</span
+              >
+              <!-- 클래스 on 부여시 display:block; -->
+            </div>
+            <div class="input-c-1">
+              <input type="checkbox" id="idsave" />
+              <label for="idsave"><span>아이디 저장</span></label>
+            </div>
+          </form>
+          <button class="btn btn-b1" onclick="location.href='home.html'">
+            로그인
+          </button>
+          <div class="btn-g btn-s1 mt-2">
+            <button onclick="location.href='join-01.html'">회원가입</button>
+            <button onclick="location.href='findid.html'">이메일 찾기</button>
+            <button onclick="location.href='findpass.html'">비밀번호 찾기</button>
+          </div>
+          <div class="text-center mt-2 sns">간편로그인</div>
+          <div class="btn-g">
+            <button><img src="img/icon-google.png" alt="구글 아이콘" /></button>
+            <button>
+              <img src="img/icon-naver.png" alt="네이버 아이콘" />
+            </button>
+            <button>
+              <img src="img/icon-kakao.png" alt="카카오 아이콘" />
+            </button>
+            <button><img src="img/icon-apple.png" alt="애플 아이콘" /></button>
+          </div>
         </div>
-    </body>
+      </div>
+    </div>
+  </body>
 </html>
