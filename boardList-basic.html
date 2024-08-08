@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>저장한 목록</title>
+    <title>오늘의 설교</title>
     <!-- css -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
@@ -16,28 +16,30 @@
       <div class="wrap">
         <div class="container">
           <div class="appBar">
-            <button class="backBtn" onclick="location.href='mypage.html'"></button>
-            <h1>저장한 목록</h1>
+            <button class="backBtn" onclick="location.href='home.html'"></button>
+            <h1>오늘의 설교</h1>
             <div class="blank"></div>
           </div>
-          <ul class="list-1">
-            <li>
-              <a href="">
+          <ul class="basic-list">
+            <li class="list-item" onclick="location.href='boardList-basic-detail.html'">
+              <div class="d-flex ai-center">
                 <div>
                   <span class="board-date">yyyy.mm.dd</span>
-                  <h4 class="board-title ellipsis">2023년 성탄기념 봉사활동 안내</h4>
+                  <h4 class="board-title ellipsis">넘치는 축복과 감사 [ 23년 성탄 감사예배 ] / 김철수 목사 / 마태복음 5장 16절</h4>
                 </div>
-                <button class="bookmark"></button>
-              </a>
+                <div class="boardImg"><img src="img/testImg.png" alt="게시물 이미지"></div>
+              </div>
+              <button class="enter"></button>
             </li>
-            <li>
-              <a href="">
+            <li class="list-item" onclick="location.href='boardList-basic-detail.html'">
+              <div class="d-flex ai-center">
                 <div>
                   <span class="board-date">yyyy.mm.dd</span>
-                  <h4 class="board-title ellipsis">2023년 성탄기념 봉사활동 안내</h4>
+                  <h4 class="board-title ellipsis">넘치는 축복과 감사 [ 23년 성탄 감사예배 ] / 김철수 목사 / 마태복음 5장 16절</h4>
                 </div>
-                <button class="bookmark"></button>
-              </a>
+                <div class="boardImg"></div>
+              </div>
+              <button class="enter"></button>
             </li>
           </ul>
         </div>
@@ -55,7 +57,7 @@
               <p>홈</p>
             </a>
           </li>
-          <li class="on">
+          <li>
             <a href="mypage.html">
               <div></div>
               <p>마이페이지</p>
@@ -64,6 +66,5 @@
         </ul>
       </div>
     </div>
-
   </body>
 </html>

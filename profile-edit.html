@@ -15,29 +15,40 @@
     <div class="screen">
       <div class="wrap">
         <div class="container">
-
+          <div class="appBar">
+            <button class="backBtn" onclick="location.href='profile.html'"></button>
+            <h1>내정보</h1>
+            <div class="blank"></div>
+          </div>
+          <div class="contents mt-2">
+            <div class="input-t-1">
+              <h3>이름</h3>
+              <input type="text" placeholder="이름을 입력해주세요." />
+            </div>
+            <div class="input-t-1">
+              <h3>연락처</h3>
+              <input type="number" placeholder="-없이 휴대폰 번호를 입력해주세요." />
+            </div>
+            <div class="lbox off">
+              <div>
+                <h4>이메일</h4>
+                <p>aaa@aaa.com</p>
+              </div>
+              <span class="info"></span>
+            </div>
+            <div class="input-t-1">
+              <h3>비밀번호</h3>
+              <input type="password" placeholder="비밀번호를 입력해주세요." />
+              <span class="info">영문 대문자, 소문자, 숫자, 특수문자 조합의 8자 이상</span>
+            </div>
+            <div class="input-t-1">
+              <h3>비밀번호 재확인</h3>
+              <input type="password" placeholder="비밀번호를 입력해주세요." />
+              <span class="warning">비밀번호가 일치하지 않습니다.</span>
+            </div>
+          </div>
+          <button class="btn-b1 bottom" onclick="location.href='profile.html'">완료</button>
         </div>
-
-        <ul class="nav">
-          <li>
-            <a href="alarm.html">
-              <div></div>
-              <p>알림</p>
-            </a>
-          </li>
-          <li>
-            <a href="home.html">
-              <div></div>
-              <p>홈</p>
-            </a>
-          </li>
-          <li class="on">
-            <a href="mypage.html">
-              <div></div>
-              <p>마이페이지</p>
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
 

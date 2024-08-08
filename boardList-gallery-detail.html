@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>저장한 목록</title>
+    <title>교회 주보</title>
     <!-- css -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
@@ -16,30 +16,21 @@
       <div class="wrap">
         <div class="container">
           <div class="appBar">
-            <button class="backBtn" onclick="location.href='mypage.html'"></button>
-            <h1>저장한 목록</h1>
+            <button class="backBtn" onclick="location.href='boardList-gallery.html'"></button>
+            <h1>교회 주보</h1>
             <div class="blank"></div>
           </div>
-          <ul class="list-1">
-            <li>
-              <a href="">
-                <div>
-                  <span class="board-date">yyyy.mm.dd</span>
-                  <h4 class="board-title ellipsis">2023년 성탄기념 봉사활동 안내</h4>
-                </div>
-                <button class="bookmark"></button>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div>
-                  <span class="board-date">yyyy.mm.dd</span>
-                  <h4 class="board-title ellipsis">2023년 성탄기념 봉사활동 안내</h4>
-                </div>
-                <button class="bookmark"></button>
-              </a>
-            </li>
-          </ul>
+          
+          <div class="board-wrap mt-1">
+            <div class="board-top">
+              <span class="board-date">yyyy.mm.dd</span>
+              <h2 class="board-title">2023년 12월 24일 주보</h2>
+            </div>
+            <!-- 사용자가 에디터를 통해 입력한 내용 - 현재는 임의로 제작 -->
+            <div class="board-contents">
+              <img src="img/testImg.png" alt="">
+            </div>
+          </div>
         </div>
 
         <ul class="nav">
@@ -55,7 +46,7 @@
               <p>홈</p>
             </a>
           </li>
-          <li class="on">
+          <li>
             <a href="mypage.html">
               <div></div>
               <p>마이페이지</p>
@@ -64,6 +55,5 @@
         </ul>
       </div>
     </div>
-
   </body>
 </html>

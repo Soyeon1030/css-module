@@ -162,6 +162,12 @@ textarea {
   position: sticky;
 }
 
+.bottom {
+  position: absolute;
+  bottom: 1.5rem;
+  width: calc(100% - 2rem) !important;
+}
+
 /* containers */
 .container 
 .container-sm,
@@ -182,7 +188,18 @@ textarea {
   padding: 0.75rem;
   padding-bottom: 5rem;
 }
-
+.lbox {
+  margin-bottom: 1rem;
+}
+.lbox div {
+  border-bottom: 1px solid var(--bs-gray-500);
+}
+.lbox p {
+  padding: 0.5rem 0.5rem ;
+}
+.lbox.off p {
+  background: var(--bs-gray-100);
+}
 /* 폰트 크기 */
 .fs-10 {
   font-size: 0.625rem;
@@ -211,6 +228,7 @@ textarea {
 .fs-40 {
   font-size: 2.5rem;
 }
+
 /* 말줄임 */
 .ellipsis {
   width: auto;
@@ -339,7 +357,24 @@ button.btn-b-line.p-fixed {
   width: calc(100% - 2rem);
   bottom: 5.25rem;
 }
-
+.secession { 
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem 0 ;
+  color: var(--bs-gray-600);
+}
+.bookmark {
+  width: 24px;
+  height: 24px;
+  background: url('../img/icon-bookmark-fill.png')no-repeat center;
+}
+.enter {
+  width: 24px;
+  height: 24px;
+  background: url('../img/icon-arrow-right.png')no-repeat center;
+}
 /* input - text */
 .input-t-1 {
   margin-bottom: 16px;
@@ -351,7 +386,7 @@ button.btn-b-line.p-fixed {
 }
 .input-t-1 input {
   width: 100%;
-  padding: 12px 0;
+  padding: 0.75rem 0.5rem;
   border: none;
   border-bottom: 1px solid var(--bs-gray-500);
   transition: all 0.5s;
@@ -447,6 +482,7 @@ input[type=checkbox] {
   display: flex;
   justify-content: space-around;
   position: fixed;
+  z-index: 99;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -546,6 +582,56 @@ input[type=checkbox] {
   font-weight: 700;
 }
 
+/* 아코디언 */
+.accordion {
+  border-bottom: 1px solid var(--bs-gray-500);
+}
+.accordion-wrap {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.accordion-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem 0;
+}
+.accordion-question span {
+  font-size: 0.875rem;
+  color: var(--bs-gray-600);
+}
+.accordion-question .wait  {
+  font-size: 0.75rem;
+  color: var(--bs-gray-500);
+}
+.accordion-question .complete  {
+  font-size: 0.75rem;
+  color: var(--bs-danger);
+}
+.accordion-question .d-flex {
+  gap: 0.75rem;
+}
+.accordion-title {
+  font-weight: 700;
+}
+.accordion.active .accordion-wrap {
+  max-height: 1000px;
+  transition: max-height 0.3s ease-in-out;
+}
+.accordion-text {
+  padding-bottom: .875rem;
+  color: var(--bs-gray-700);
+}
+.accordion-answer {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.876rem;
+  background: var(--bs-gray-100);
+  margin-bottom: 1rem;
+}
+
 /* slider 슬라이더 */
 .slick-next, 
 .slick-prev {
@@ -620,6 +706,23 @@ input[type=checkbox] {
   border: 1px solid var(--bs-gray-500);
   border-radius: 4px;
   margin-top: 0.5rem;
+}
+.terms-list li {
+  cursor: pointer;
+  margin: 0.5rem 0;
+}
+.terms-list li p {
+  position: relative;
+  margin-left: 32px;
+}
+.terms-list li button {
+  color: var(--bs-gray-600);
+  text-decoration: underline;
+}
+.term-wrap {
+  position: fixed;
+  bottom: 100px;
+  width: calc(100% - 2rem);
 }
 .terms-wrap .input-c-1{
   margin-top: 0.75rem;
@@ -696,27 +799,105 @@ input[type=checkbox] {
   font-size: 1rem;
 }
 
-/* board list */
-.boardlist {
+/* board list  기본 게시판 */
+.basic-list {
   margin: 1rem 0;
 }
-.boardlist .list-item {
+.basic-list  .list-item {
   display: flex;
   gap: 1rem;
   padding: 1rem 0;
   align-items: center;
   border-bottom: 1px solid var(--bs-gray-300);
 }
-.boardlist .list-item .profile {
+.basic-list .list-item .profile {
   flex-shrink: 0;
   width: 3rem;
   height: 3rem;
   border-radius: 2rem;
   border: 1px solid var(--bs-gray-200);
 }
-.boardlist .list-item span {
+.basic-list .list-item span {
   font-size: 0.875rem;
   color: var(--bs-gray-500);
+}
+.basic-list .list-item .d-flex {
+  gap: 0.5rem;
+}
+.basic-list .boardImg {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+}
+.basic-list .boardImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* gallery 갤러리 게시판 */
+.gallery-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.gallery-list .list-item {
+  width: calc((100% - 1rem)/2);
+}
+.gallery-list .boardImg {
+  width: 100%;
+  height: 180px;
+  min-height: 150px;
+}
+.gallery-list .boardImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+.board-title {
+  padding: 0.5rem 0 0.25rem;
+  font-weight: 600;
+}
+.board-date {
+  font-size: 0.875rem;
+  color: var(--bs-gray-500);
+}
+
+.board-wrap .board-top {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--bs-gray-300);
+}
+.board-contents {
+  padding: 1rem 0;
+  color: var(--bs-gray-800);
+  margin-bottom: 3rem;
+}
+.board-contents img {
+  width: 100%;
+  object-fit: cover;
+}
+.board-contents iframe {
+  margin: 0.5rem 0;
+}
+.board-contents .example caption {
+  padding-bottom: 0.5rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.board-contents .example {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.board-contents .example th {
+  padding: 0.75rem 0;
+  background: var(--bs-gray-200);
+}
+.board-contents .example td{
+  text-align: center;
+  padding: 0.75rem 0;
+  border: 1px solid var(--bs-gray-200);
 }
 
 /* mypage 마이페이지 */
@@ -751,6 +932,7 @@ input[type=checkbox] {
   padding: 0.875rem 0.75rem;
   border: 1px solid var(--bs-gray-500);
   border-radius: 4px;
+  background: url('../img/icon_arrow_down.png')no-repeat center right 1rem;
 }
 .inquiry-1 input[type="text"] {
   width: 100%;
@@ -766,6 +948,9 @@ input[type=checkbox] {
   padding: 0.875rem 0.75rem;
   border: 1px solid var(--bs-gray-500);
   border-radius: 4px;
+}
+.filebox {
+  position: relative;
 }
 .filebox input[type="file"] {
   position: absolute;
@@ -789,10 +974,17 @@ input[type=checkbox] {
 }
 .filebox label {
   position: absolute;
-  right: 1rem;
+  top: 0;
+  right: 0;
   display: inline-block;
-  padding: 0.875rem 0.75rem;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
+}
+.filebox img {
+  position: absolute;
+  top: 0.875rem;
+  right: 1rem;
 }
 .novalue {
   position: absolute;
@@ -823,20 +1015,73 @@ input[type=checkbox] {
   font-size: 1rem;
   font-weight: 700;
 }
-.terms-list li {
-  cursor: pointer;
-  margin: 0.5rem 0;
+
+/* calendar 캘린더 */
+.fc .fc-view-harness {
+  height: 426px !important;
 }
-.terms-list li p {
-  position: relative;
-  margin-left: 32px;
+.fc .fc-toolbar {
+  align-items: flex-end !important;
 }
-.terms-list li button {
+.fc-toolbar-title {
+  font-size: 1.25rem !important;
+  font-weight: 600;
+}
+.fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 1rem;
+}
+.fc .fc-daygrid-day-number {
+  font-size: 0.875rem;
+}
+.fc .fc-col-header-cell-cushion {
+  font-weight: 600;
+}
+.fc .fc-daygrid-day-top {
+  justify-content: center;
+}
+.fc-theme-standard td, .fc-theme-standard th,
+.fc-theme-standard .fc-scrollgrid {
+  border: none;
+}
+.fc .fc-button-primary,
+.fc .fc-button-primary:hover,
+.fc .fc-button-primary:active,
+.fc .fc-button-primary:focus  {
+  background-color: var(--bs-light) !important;
+  color: var(--bs-gray-800) !important;
+  outline: 0 !important;
+  border: 0 !important;
+}
+.fc .fc-button-primary:disabled {
+  background-color: var(--bs-light);
+  border-color: var(--bs-light);
+  color: var(--bs-dark); 
+}
+.calendar-contents {
+  padding: 1rem 0;
+  border-top: 1px solid var(--bs-gray-200);
+}
+.calendar-contents h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.schedule-wrap li .date {
+  margin-top: 0.5rem;
+  font-weight: 600;
   color: var(--bs-gray-600);
-  text-decoration: underline;
 }
-.term-wrap {
-  position: fixed;
-  bottom: 100px;
-  width: calc(100% - 2rem);
+.schedule-item {
+  margin-top: 0.5rem;
+  padding: 1.5rem;
+  background: var(--bs-gray-800);
+  color: var(--bs-light);
+  border-radius: 1rem;
+}
+.schedule-item .name {
+  font-weight: 700;
+}
+.schedule-item .place {
+  margin-top: 1rem;
+  color: var(--bs-gray-400);
 }

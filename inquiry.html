@@ -14,7 +14,7 @@
       <div class="wrap">
         <div class="container container-b">
           <div class="appBar">
-            <button class="backBtn" onclick="history.go(-1)"></button>
+            <button class="backBtn" onclick="location.href='mypage.html'"></button>
             <h1>소리함</h1>
             <div class="blank"></div>
           </div>
@@ -58,6 +58,7 @@
                       ><img src="img/icon_file.png" alt="파일 첨부 아이콘"
                     /></label>
                     <input type="file" id="file" />
+                    <span class="info">.png, .jpg 파일 유형의 사진, 이미지 파일만 가능합니다.</span>
                   </div>
                   <div class="terms-wrap">
                     <div class="input-c-1">
@@ -68,12 +69,77 @@
                     </div>
                     <div class="terms"></div>
                   </div>
-                  <div class="btn btn-b1"><button>문의하기</button></div>
                 </div>
+                <div class="btn btn-b1"><button>문의하기</button></div>
               </div>
 
               <div id="tab2" class="tab-content">
-                <div class="novalue"><p>문의 내역이 없습니다</p></div>
+                <!-- 문의 내역이 없는 경우 -->
+                <!-- <div class="novalue"><p>문의 내역이 없습니다</p></div> -->
+
+                <!-- 문의 내역이 있는 경우 -->
+                 <div>
+                  <ul class="accordion-container">
+                    <li class="accordion active">
+                      <div class="accordion-question">
+                        <div class="d-flex ai-center">
+                          <img src="img/icon-qusetion.png" alt="문의 아이콘">
+                          <div>
+                            <h3 class="accordion-title">문의내용 제목이 입력되는 곳입니다.</h3>
+                            <span>yyyy.mm.dd</span>
+                          </div>
+                        </div>
+                        <!-- wait는 답변대기, complete는 답변완료 -->
+                        <div class="complete">답변 완료</div>
+                      </div>
+                      <div class="accordion-wrap">
+                        <p class="accordion-text">
+                          문의 제목을 클릭하면 보이는문의한 내용 입니다. 글자는 프리텐다드이고 Regular 굵기에 폰트 사이즈는 16px 로 작성하고 있습니다. 
+                          내용이 길어진다면 이런 느낌으로 작성될 것입니다.
+                          <br/>
+                          <br/>
+                          단락을 띄웠을때는 이런 모양이 됩니다. 
+                          이미치를 첨부하면 이렇게 보입니다.
+                        </p>
+                        <div class="accordion-answer">
+                          <img src="img/icon-anwser.png" alt="답변 아이콘">
+                          <p>
+                            건의내용에 대한 답변내용이 작성되는 곳입니다.
+                            폰트는 프리텐다드 Regular이고 폰트 사이즈는
+                            14px 입니다.
+
+                            내용이 길어지는 경우의 모습입니다.
+                            내용이 길어지는 경우의 모습입니다.
+                            내용이 길어지는 경우의 모습입니다.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="accordion">
+                      <div class="accordion-question">
+                        <div class="d-flex ai-center">
+                          <img src="img/icon-qusetion.png" alt="문의 아이콘">
+                          <div>
+                            <h3 class="accordion-title">문의내용 제목이 입력되는 곳입니다.</h3>
+                            <span>yyyy.mm.dd</span>
+                          </div>
+                        </div>
+                        <!-- wait는 답변대기, complete는 답변완료 -->
+                        <div class="wait">답변 대기</div>
+                      </div>
+                      <div class="accordion-wrap">
+                        <p class="accordion-text">
+                          문의 제목을 클릭하면 보이는문의한 내용 입니다. 글자는 프리텐다드이고 Regular 굵기에 폰트 사이즈는 16px 로 작성하고 있습니다. 
+                          내용이 길어진다면 이런 느낌으로 작성될 것입니다.
+                          <br/>
+                          <br/>
+                          단락을 띄웠을때는 이런 모양이 됩니다. 
+                          이미치를 첨부하면 이렇게 보입니다.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                 </div>
               </div>
             </div>
           </div>
@@ -81,6 +147,7 @@
       </div>
     </div>
     <script>
+      //탭메뉴
       const tabItem = document.querySelectorAll(".tab-item");
       const tabContent = document.querySelectorAll(".tab-content");
 
@@ -97,6 +164,26 @@
           tabContent[index].classList.add("active");
         });
       });
+
+      // 아코디언 
+      const btns = document.querySelectorAll(".accordion-question");
+
+      btns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const faqItem = btn.parentNode;
+          const isActive = faqItem.classList.contains("active");
+          removeActiveClasses();
+          if (!isActive) {
+            faqItem.classList.add("active");
+          }
+        });
+      });
+      function removeActiveClasses() {
+        btns.forEach((btn) => {
+          btn.parentNode.classList.remove("active");
+        });
+      }
+
     </script>
   </body>
 </html>
