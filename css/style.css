@@ -375,6 +375,17 @@ button.btn-b-line.p-fixed {
   height: 24px;
   background: url('../img/icon-arrow-right.png')no-repeat center;
 }
+.floating.write {
+  position: fixed;
+  z-index: 100;
+  right: 1rem;
+  bottom: 5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100%;
+  background: var(--bs-gray-800) url('../img/icon-pencil-line.png')no-repeat center;
+}
+
 /* input - text */
 .input-t-1 {
   margin-bottom: 16px;
