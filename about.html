@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>알림</title>
+    <title>교회소개</title>
     <!-- css -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" href="css/style.css" />
     <!-- script -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript"src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
   </head>
   <body>
@@ -17,43 +18,23 @@
         <div class="container">
           <div class="appBar">
             <button class="backBtn" onclick="history.go(-1)"></button>
-            <h1>알림</h1>
-            <button class="setting" onclick="location.href='setting.html'"></button>
+            <h1>교회 소개</h1>
+            <div class="blank"></div>
           </div>
-
-          <div class="basic-list">
-            <div class="list-item">
-              <div class="profile"></div>
-              <div>
-                <h2 class="ellipsis">[교회소식] 2023년 성탄기념 봉사활동 안내</h2>
-                <span>17시간 전</span>
-              </div>
-            </div>
-            <div class="list-item">
-              <div class="profile"></div>
-              <div>
-                <h2 class="ellipsis">[교회소식] 2023년 성탄기념 봉사활동 안내</h2>
-                <span>17시간 전</span>
-              </div>
-            </div>
-            <div class="list-item">
-              <div class="profile"></div>
-              <div>
-                <h2 class="ellipsis">[교회소식] 2023년 성탄기념 봉사활동 안내</h2>
-                <span>17시간 전</span>
-              </div>
-            </div>
+          <div class="contents mt-1">
+            "00 교회"에 대한 설명을 적어두는 곳으로 앱 관리자가 직접 관리자페이지에서 작성하는 부분입니다. <br/>
+            폰트는 프리텐다드 Regular이고 폰트 크기는 14px로 하였습니다. 
           </div>
         </div>
 
         <ul class="nav">
-          <li class="on">
+          <li>
             <a href="alarm.html">
               <div></div>
               <p>알림</p>
             </a>
           </li>
-          <li>
+          <li class="on">
             <a href="home.html">
               <div></div>
               <p>홈</p>
@@ -66,6 +47,7 @@
             </a>
           </li>
         </ul>
+
       </div>
     </div>
 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>교우 소식</title>
+    <!-- css -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- script -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript"src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+  </head>
+  <body>
+    <div class="screen">
+      <div class="wrap">
+        <div class="container">
+          <div class="appBar">
+            <button class="backBtn" onclick="history.go(-1)"></button>
+            <h1>교우 소식</h1>
+            <div class="etc"><a href="#popup01" class="open"></a></div>
+          </div>
+          <div class="board-wrap mt-1">
+            <div class="board-top">
+              <span class="board-date">yyyy.mm.dd</span>
+              <h2 class="board-title">000님 ㅁㅁㅁㅁ식당 개업</h2>
+            </div>
+            <div class="board-contents">
+              <div class="detail">
+                <p>교우 소식 내용이 들어갈 위치입니다. 
+                  <br/>
+                  폰트는 프리텐다드에 Regular고 폰트 사이즈는 16px 입니다. 컬러는 #767676을 사용하고 있습니다. </p>
+                  <div class="btn-g">
+                    <button>
+                      <div class="like"></div>
+                      <p>좋아요</p>
+                    </button>
+                    <button>
+                      <div class="bookmark"></div>
+                      <p>저장하기</p>
+                    </button>
+                  </div>
+              </div>
+              <div class="comment-wrap">
+                <h2>댓글 &#40;<span>3</span>&#41;</h2>
+                <div class="comment">
+                  <div class="d-flex jc-between">
+                    <h3 class="name">김철수 장로</h3>
+                    <div class="etc"><a href="#popup01" class="open"></a></div>
+                  </div>
+                  <p class="text">댓글 내용입니다. 댓글 내용입니다.</p>
+                  <div class="d-flex">
+                    <span class="date">yyyy.mm.dd</span>
+                    <button>댓글쓰기</button>
+                  </div>
+                </div>
+                <div class="comment re">
+                  <div class="d-flex jc-between">
+                    <h3 class="name">김철수 장로</h3>
+                    <div class="etc"><a href="#popup01" class="open"></a></div>
+                  </div>
+                  <p class="text">댓글 내용입니다. 댓글 내용입니다.</p>
+                  <div class="d-flex">
+                    <span class="date">yyyy.mm.dd</span>
+                    <button>댓글쓰기</button>
+                  </div>
+                </div>
+                <div class="comment">
+                  <div class="d-flex jc-between">
+                    <h3 class="name">김철수 장로</h3>
+                    <div class="etc"><a href="#popup01" class="open"></a></div>
+                  </div>
+                  <p class="text">댓글 내용입니다. 댓글 내용입니다.</p>
+                  <div class="d-flex">
+                    <span class="date">yyyy.mm.dd</span>
+                    <button>댓글쓰기</button>
+                  </div>
+                </div>
+              </div>
+              <div class="comment-input">
+                <input type="text" placeholder="댓글을 입력해주세요.">
+                <button>등록</button>
+              </div>
+
+              <div class="popup-wrap"></div>
+              <div class="popup" id="popup01">
+                <div class="btn-g">
+                  <button>차단하기</button>
+                  <div class="line"></div>
+                  <button>신고하기</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

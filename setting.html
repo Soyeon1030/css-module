@@ -15,7 +15,43 @@
     <div class="screen">
       <div class="wrap">
         <div class="container">
-
+          <div class="appBar">
+            <button class="backBtn" onclick="history.go(-1)"></button>
+            <h1>알림 설정</h1>
+            <button class="blank"></button>
+          </div>
+          <div class="contents mt-2">
+            <h4>알림설정</h4>
+            <ul class="list-line">
+              <li class="d-flex jc-between ai-center">
+                <div>
+                  <h4 class="board-title ellipsis">예배 일정 알림</h4>
+                  <span>예배 일정을 알려드립니다.</span>
+                </div>
+                <label class="toggleBtn">
+                  <input role="switch" type="checkbox" />
+                </label>
+              </li>
+              <li class="d-flex jc-between ai-center">
+                <div>
+                  <h4 class="board-title ellipsis">교회소식 알림</h4>
+                  <span>교회관련 소식을 알려드립니다.</span>
+                </div>
+                <label class="toggleBtn">
+                  <input role="switch" type="checkbox" />
+                </label>
+              </li>
+              <li class="d-flex jc-between ai-center">
+                <div>
+                  <h4 class="board-title ellipsis">교우소식 알림</h4>
+                  <span>교우관련 소식을 알려드립니다.</span>
+                </div>
+                <label class="toggleBtn">
+                  <input role="switch" type="checkbox"/>
+                </label>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <ul class="nav">
